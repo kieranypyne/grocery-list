@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Express App</title>
+  </head>
+  <body>
+    <form method="POST" action="/tasks">
+      <input type="text" name="text" placeholder="What do you want to buy?">
+      <input type="amount" name="amount" placeholder="How much?">
+      <input type="submit" value="Submit">
+    </form>
+
+    <ul>
+      <% for(idx in tasks) { %>
+      <li><%= tasks[idx].text + " " + tasks[idx].amount %></li>
+      <% } %>
+    </ul>
+
+  </body>
+</html>
